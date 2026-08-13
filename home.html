@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nahyun Kim</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background: #fff;
+    font-family: 'Helvetica Neue', Helvetica;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;   /* 이미지 레이어의 기준점 */
+  }
+
+  .hero {
+    font-family: 'Helvetica Neue', Helvetica;
+    padding: 10px 10px 0;
+    position: relative;
+    z-index: 1;   /* 텍스트를 이미지보다 위/아래 어디 둘지 조절 가능 */
+  }
+
+  .hero h1 {
+    font-size: 6vw;
+    font-weight: 900;
+    line-height: 0.8;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+ /* ===== 얼굴 이미지 10개: 텍스트 영역 위에 겹쳐서 절대 배치 ===== */
+.face-layer {
+  position: absolute;
+  top: 9vw;
+  left: 0;
+  width: 100%;
+  height: auto; /* 기존 50% -> auto로 변경 */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto); /* 기존 repeat(2, 1fr) -> repeat(2, auto)로 변경 */
+  padding: 5px;
+  row-gap: 0px; /* 원하는 간격 수치 지정 (예: 0px ~ 10px) */
+  column-gap: 2px;
+  z-index: 2;
+}
+
+  .face-layer img {
+  width: 70%;
+  height: auto; /* 기존 65% -> auto로 변경해 비율 유지 */
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  pointer-events: auto;
+  justify-self: center; /* 이미지 좌우 중앙 정렬 */
+}
+
+  .face-layer img:hover {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* ===== 얼굴 이미지 레이어 끝 ===== */
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    z-index: 3;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #000;
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>I'M NAHYUN KIM.<br>VISUAL DESIGNER,<br>BASED IN SOUTH KOREA</h1>
+  </div>
+
+  <!-- 얼굴 이미지 10개: 텍스트 위에 겹쳐서 배치, 호버 시 나타남 -->
+  <div class="face-layer">
+    <img src="얼굴1.png" alt="">
+    <img src="얼굴2.png" alt="">
+    <img src="얼굴3.png" alt="">
+    <img src="얼굴4.png" alt="">
+    <img src="얼굴5.png" alt="">
+    <img src="얼굴5.png" alt="">
+    <img src="얼굴4.png" alt="">
+    <img src="얼굴3.png" alt="">
+    <img src="얼굴2.png" alt="">
+    <img src="얼굴1.png" alt="">
+  </div>
+
+  <footer>
+    <a href="mailto:nahyun050300@gmail.com">CONTACT</a>
+    <a href="about.html">ABOUT</a>
+    <a href="work.html">WORK</a>
+    <a href="https://www.instagram.com/projectskgus" target="_blank">INSTAGRAM</a>
+  </footer>
+
+</body>
+</html>

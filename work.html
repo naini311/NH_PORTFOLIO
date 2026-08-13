@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Work - Nahyun Kim</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 40px 40px 200px;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #ffffff;
+  }
+
+  .section {
+    margin-bottom: 50px;
+  }
+
+  .section-label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+ .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.grid img {
+  height: 120px;         /* 원하는 세로 높이로 조절 */
+  width: auto;           /* 가로는 원본 비율대로 자동 계산 */
+  object-fit: cover;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+  .grid img:hover {
+    opacity: 1;
+  }
+
+  /* 뒤로가기*/
+  .back-btn {
+    z-index: 10;
+     font-family: 'Helvetica Neue', Helvetica;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: #ff0000;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .back-btn img {
+    width: 50px;
+  }
+
+  /* 카피라이트: 화면 맨 아래 */
+  footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-bar"></div>
+
+  <!-- 섹션 01 -->
+  <div class="section">
+    <div class="section-label">(01)</div>
+    <div class="grid">
+   <img src="hl-1.jpg" alt="">
+      <img src="hl-2.jpg" alt="">
+      <img src="hl-3.jpg" alt="">
+      <img src="hl-4.jpg" alt="">
+      <img src="hl-5.jpg" alt="">
+      <img src="hl-6.jpg" alt="">
+
+    </div>
+  </div>
+
+  <!-- 섹션 02 -->
+  <div class="section">
+    <div class="section-label">(02)</div>
+    <div class="grid four">
+      <img src="귀1.png" alt="">
+      <img src="귀2.png" alt="">
+      <img src="귀3.png" alt="">
+    </div>
+  </div>
+
+  <!-- 섹션 03 -->
+  <div class="section">
+    <div class="section-label">(03)</div>
+    <div class="grid four">
+      <img src="언캐니1.png" alt="">
+      <img src="언캐니2.png" alt="">
+      <img src="언캐니3.png" alt="">
+      <img src="언캐니4.JPG" alt="">
+      <img src="언캐니5.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- 뒤로가기 -->
+  <a href="home.html" class="back-btn">
+    <img src="back.png" alt="Back">
+    BACK
+  </a>
+
+  <!-- 카피라이트 -->
+  <footer>
+    COPYRIGHT © NAHYUN KIM. ALL RIGHTS RESERVED.<br>
+    BASED IN SOUTH KOREA.
+  </footer>
+
+</body>
+</html>
